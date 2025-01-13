@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Velora Clothing Brand</title>
+      <style>
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         body {
+         margin: 0;
+         font-family: Arial;
+         background: linear-gradient(135deg, #d27ea4, #f1f5f8);
+         color: #f1f5f8;
+         padding: 0;
+         line-height: 1.6;
+         text-align:center;
+          
+        }
+         a {
+         text-decoration: none;
+         color: inherit;
+         }
+         .header {
+         text-align:center;
+         background-color: #733258;; 
+         color: white;
+         padding: 20px 0;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+         position: relative;
+         z-index: 10;
+         }
+         header .logo h1 {
+         font-size: 3rem;
+         font-weight: 700;
+         }
+         header nav ul {
+         list-style: none;
+         padding: 0;
+         margin-top: 10px;
+         }
+         header nav ul li {
+         display: inline-block;
+         margin: 0 25px;
+         }
+         header nav ul li a {
+         color: pink;
+         font-size: 1.2rem;
+         font-weight: bold;
+         text-transform: uppercase;
+         padding:10px 15px;
+         transition: all 0.3s ease;
+         
+    
+         }
+         header nav ul li a:hover {
+         background-color: #733258; 
+         color: #d27ea4; 
+         border-radius: 5px;
+         transform: scale(1.1);
+         }
+         .brand-name {
+         font-family: 'Playfair Display', serif;
+         font-size: 6 rem;
+         font-weight: bold;
+         color: transparent;
+         letter-spacing: 5px;
+         text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+         text-transform: uppercase;
+         background: linear-gradient(to right, #3a5a40, #733258); 
+         background-clip: text; 
+         text-align: center;
+         margin-top: 50px;
+         }
+         .hero {
+         background: url('hero.jpg') no-repeat center center/cover;
+         color: white;
+         text-align: center;
+         padding: 120px 20px;
+         background-size: cover;
+         background-position: center;
+         }
+         .hero h2 {
+         font-size: 3rem;
+         margin-bottom: 20px;
+         font-weight: 700;
+         text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+         }
+         .hero p {
+         font-size: 1.3rem;
+         margin-bottom: 30px;
+         font-weight: 500;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+         }
+         .cta-btn {
+         padding: 12px 30px;
+         background-color: #4c2340;
+         color: white;
+         font-weight: bold;
+         border-radius: 25px;
+         transition: background-color 0.3s ease, transform 0.3s ease;
+         }
+         .cta-btn:hover {
+         background-color: #4c2340;
+         transform: scale(1.1);
+         }
+         .about-us {
+         background-color: #f9f9f9;
+         padding: 80px 20px;
+         text-align: center;
+         }
+         .about-us h2 {
+         font-size: 2.8rem;
+         color: #d27ea4;
+         margin-bottom: 20px;
+         font-weight: 700;
+         }
+         .about-us p {
+         font-size: 1.3rem;
+         color: #666;
+         margin-bottom: 15px;
+         line-height: 1.8;
+         }
+         .row {
+         display: -ms-flexbox; /* IE10 */
+         display: flex;
+         -ms-flex-wrap: wrap; /* IE10 */
+         flex-wrap: wrap;
+         padding: 0 4px;
+         background-color: #f9f9f9;
+         
+
+         }
+         /* Create four equal columns that sits next to each other */
+         .column {
+         -ms-flex: 25%; /* IE10 */
+         flex: 25%;
+         max-width: 25%;
+         padding: 0 4px;
+         }
+         .column img {
+         margin-top: 8px;
+         vertical-align: middle;
+         width: 100%;
+         }
+         /* Responsive layout - makes a two column-layout instead of four columns */
+         @media screen and (max-width: 800px) {
+         .column {
+         -ms-flex: 50%;
+         flex: 50%;
+         max-width: 50%;
+         }
+         }
+         /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+         @media screen and (max-width: 600px) {
+         .column {
+         -ms-flex: 100%;
+         flex: 100%;
+         max-width: 100%;
+         }
+         }
+         .overlay {
+         position: absolute;
+         bottom: 0;
+         left: 100%;
+         right: 0;
+         background-color: #f9f9f9;
+         overflow: hidden;
+         width: 0;
+         height: 100%;
+         transition: .5s ease;
+         }
+         .container:hover .overlay {
+         width: 100%;
+         left: 0;
+         }
+         .container {
+         position: relative;
+         
+         }
+         .image {
+         display: block;
+         width: 100%;
+         height: auto;
+         }
+         .contact-us {
+         background-color: #ffffff;
+         padding: 80px 20px;
+         text-align: center;
+         }
+         .contact-us h2 {
+         font-size: 2.8rem;
+         color: #3a5a40;
+         margin-bottom: 20px;
+         font-weight: 700;
+         }
+         .contact-us p {
+         font-size: 1.2rem;
+         color: #666;
+         line-height: 1.8;
+         max-width: 900px;
+         margin: 0 auto 40px;
+         }
+         .contact-us form {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 20px;
+         max-width: 600px;
+         margin: 0 auto;
+         }
+         .contact-us input,
+         .contact-us textarea {
+         width: 100%;
+         padding: 15px;
+         border: 1px solid #ddd;
+         border-radius: 8px;
+         font-size: 1rem;
+         color: #333;
+         background-color: #f9f9f9;
+         }
+         .contact-us button {
+         padding: 12px 25px;
+         background-color: #733258;
+         color: white;
+         font-weight: bold;
+         border-radius: 25px;
+         font-size: 1.1rem;
+         border: none;
+         cursor: pointer;
+         }
+         .contact-us button:hover {
+         background-color: #733258;
+         transform: scale(1.05);
+         }
+         footer {
+         background-color: #733258;
+         color: white;
+         text-align: center;
+         padding: 20px;
+         }
+         footer p {
+         font-size: 1rem;
+         }
+         footer .copyright {
+         margin-top: 20px;
+         font-size: 0.9rem;
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <div class="logo">
+            <h1 class="brand-name"><b>Gloss and Glam</b></h1>
+         </div>
+         <nav>
+            <ul>
+               <li><a href="#home">Home</a></li>
+               <li><a href="#Gallery">Gallery</a></li>
+               <li><a href="#about-us">About Us</a></li>
+               <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+         </nav>
+      </header>
+      <div class="hero" id="home">
+         <h2>Welcome to Gloss and Glam</h2>
+         <p>Welcome to where beauty meets care , and every style tells a story!</story></p>
+         <a href="#Gallery" class="cta-btn">Book Now</a>
+      </div>
+      <div class="about-us" id="about-us">
+         <h2>About Gloss and Glam</h2>
+         <p>Welcome to Gloss and Glam salon where beauty meets elegance! We are dedicated to providing a luxurious and personalized experience. </p>
+      </div>
+      <!-- Header -->
+      <div class="header">
+         <h1>HairCut Gallery</h1>
+         <p>"Your Hair Is Your Crown"</p>
+      </div>
+      <br/>
+      <!-- Photo Grid -->
+      <div class="row">
+         <!-- 1st column -->
+         <div class="column">
+            <div class="container">
+               <img src="https://i.pinimg.com/474x/59/1c/82/591c82d0ed0019e0d79f8ef094c1a3e6.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+            <div class="container">
+               <img src="https://i.pinimg.com/736x/62/b7/7f/62b77ffa52e3881859b49a78975278eb.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+            <div class="container">
+               <img src="https://i.pinimg.com/736x/5e/c1/b9/5ec1b92a6c832ba6c39ec57a33ad7ebd.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+            <div class="container">
+               <img src="https://i.pinimg.com/736x/27/bc/35/27bc35ba739a6ce936b40564920fe702.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+         </div>
+         <!-- 2nd column -->
+         <div class="column">
+            <div class="container">
+               <img src="https://i.pinimg.com/736x/e2/35/64/e235640682cd3fda4cacf8ff93937134.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+            <div class="container">
+               <img src="https://i.pinimg.com/474x/9d/b1/e0/9db1e056017df13b120ff25a3d823610.jpg"  alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+            <div class="container">
+               <img src= "https://i.pinimg.com/474x/62/8f/0b/628f0bb26023a22b7246ca5c636b8599.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+            <div class="container">
+               <img src="https://i.pinimg.com/474x/8e/75/ee/8e75eebd91f23e76373083cda41ff837.jpg"  alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+         </div>
+         <!-- 3rd column -->
+         <div class="column">
+            <div class="container">
+               <img src="https://i.pinimg.com/474x/66/5b/08/665b08b0c92e6f42c55c2846d5d9988c.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+            <div class="container">
+               <img src="https://i.pinimg.com/474x/b7/3e/8d/b73e8d4a1e55349a0e2df17d27f29720.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+            <div class="container">
+               <img src="https://i.pinimg.com/474x/8d/44/f6/8d44f65ea1d7a558ab05185331181dc9.jpg"  alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+            <div class="container">
+               <img src="https://i.pinimg.com/474x/5c/76/f8/5c76f8f6a654cd23d4a1f0333f252a69.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+         </div>
+         <!-- 4th column -->
+         <div class="column">
+            <div class="container">
+               <img src="https://i.pinimg.com/474x/52/64/42/526442e9258381772fd970c7595a7e6e.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+            <div class="container">
+               <img src="https://i.pinimg.com/474x/5e/43/61/5e436127068f4d6691d4677de90ff978.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+            <div class="container">
+               <img src=" https://i.pinimg.com/474x/43/09/f0/4309f06c943d5bd0501d6bab5a3af9b7.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+            <div class="container">
+               <img src="https://i.pinimg.com/474x/dc/89/cc/dc89cc4db9311608a15af4c11c31eb68.jpg" alt="Avatar">
+               <div class="overlay">
+                  <div class="text">Hello World</div>
+               </div>
+            </div>
+         </div>
+      </div>
+     
+      <div class="contact-us">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us. We'd love to hear from you!</p>
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+
+      <footer>
+         <p>©️ 2024 Gloss and Glam. All Rights Reserved.</p>
+         <div class="copyright">Gloss And Glam</div>
+      </footer>
+   </body>
+</html>
