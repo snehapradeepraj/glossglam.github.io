@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> Contact us </title>
+        <style>
+            *{
+                margin:auto
+            }
+            .contact-us{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+            body{
+               background-color: #F0E5EB; 
+            }
+            form{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align:center;
+                margin:10px;
+            }
+            .heading{
+                color:#4c2340;
+               
+                font-size: 60px;
+                margin-top:15px;
+                margin-bottom: 30px;
+            }
+            p{
+                color:rgb(77, 75, 75);
+                font-size: 25px;
+            }
+            input{
+                width:300px;
+                height:20px;
+                border: 2px solid rgb(178, 173, 173);
+                border-radius:5px;
+               
+                text-align:center;
+            }
+            .name{
+                margin-top:30px;
+             padding:8px;
+                text-align:center;
+                margin-bottom:15px;
+            }
+            .email{
+                margin:15px;
+               padding:8px;
+                text-align:center;
+            }
+            textarea{
+                width:300px;
+                height:20px;
+                border: 2px solid rgb(178, 173, 173);
+                border-radius:5px;
+              padding:8px;
+                text-align:center;
+                margin:15px;
+            }
+            button{
+                border: 2px solid rgb(178, 173, 173);
+                border-radius:15px;
+                padding:8px;
+                text-align:center;
+                margin-top:15px;
+                width:150px;
+                margin-bottom:30px;
+                color:grey;
+            }
+            .container{
+                display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border:2px solid #4c2340;
+  background-color: #9B5978;
+  margin: 20px;
+  margin-top: 30px;
+  margin-bottom:30px;
+  width:500px;
+  border-radius:10px;
+            }
+            .container2{
+                display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+            }/*
+            .container2{
+                top:-400px;
+                animation:drop 0.5s ease forwards,swing 2s 3s ease forwards;
+                transform-origin: 10px 10px;
+
+            }
+            @keyframes drop{
+                0%{opacity:0}
+                70%{transform : translateY(700px)}
+                100%{transform : translateY(650px); opacity:1;}
+            }
+            @keyframes swing{
+                0%{transform: translateY(650px) rotateZ(0deg)}
+                40%{transform: translateY(650px) rotateZ(96deg)}
+                70%{transform: translateY(650px) rotateZ(76deg)}
+                100%{transform: translateY(650px) rotateZ(75deg)}
+            }*/
+        </style>
+    </head>
+    <body>
+        <div class="contact-us">
+            <p class="heading"><b>Contact Us</b><p>
+            <p>If you have any questions, feel free to reach out to us. We'd love to hear from you!</p>
+            <form>
+                <div class="container2">
+                <div class="container">
+                <input class="name" type="text" placeholder="Your Name" width="60px">
+                <input class="email" type="email" placeholder="Your Email" width="60px">
+                <textarea placeholder="Your Message" width="60px"></textarea>
+                <button type="submit"><b>Send Message</b></button>
+                </div>
+                </div>
+            </form>
+        </div>
+      
+    </body>
+</html>
